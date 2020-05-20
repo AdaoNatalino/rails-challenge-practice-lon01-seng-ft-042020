@@ -1,3 +1,7 @@
+Building.destroy_all
+Company.destroy_all
+Employee.destroy_all
+
 weworks = [
   {name: "Finsbury Pavement", 
    country: "UK", 
@@ -61,6 +65,8 @@ end
   Office.create(
     company: Company.all.sample,
     building: random_building,
-    floor: random_building_floors_array.delete(random_building_floors_array.sample)
+    floor: random_building_floors_array.delete(random_building_floors_array.sample),
+    company_id: (1..7).to_a.sample,
+    building_id: (1..3).to_a.sample
   )
 end

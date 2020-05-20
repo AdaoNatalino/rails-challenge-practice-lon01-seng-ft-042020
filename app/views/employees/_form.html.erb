@@ -1,0 +1,13 @@
+
+<%= form_for @employee do |f| %>
+<%=f.label :name%>
+<%=f.text_field :name%>
+
+   <%= fields_for :company do |company| %> 
+   <%= company.label :company_name %>
+   <%= company.text_field :name %><br>
+   <%end%>
+
+
+<%=f.submit "Save Employee"%>
+<% end %>

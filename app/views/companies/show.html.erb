@@ -1,0 +1,11 @@
+<h3><%= @company.name %></h3>
+<div>
+    <li><% @company.offices.each do |o| %>
+    <%= "#{o.building.name}, located on #{o.floor} floor!"%></li>
+    <%end%><br>
+    
+    <%= link_to  "New Employee", new_employee_path %>
+   
+</div>
+
+
